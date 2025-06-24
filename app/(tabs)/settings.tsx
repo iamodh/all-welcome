@@ -1,4 +1,5 @@
-import { Text, View } from "react-native";
+import { router } from "expo-router";
+import { Pressable, Text, View } from "react-native";
 
 export default function SettingsScreen() {
   return (
@@ -9,7 +10,10 @@ export default function SettingsScreen() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.!</Text>
+      <Text>Settings screen</Text>
+      <Pressable onPress={() => router.replace("/login")}>
+        <Text>로그인 페이지로 이동</Text>
+      </Pressable>
     </View>
   );
 }
